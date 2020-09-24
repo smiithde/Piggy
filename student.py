@@ -83,10 +83,10 @@ class Piggy(PiggyParent):
         self.stop()
 
     def shimmy(self):
-        self.servo(1000)
-        time.sleep(8)
+        self.servo(2000)
+        time.sleep(.1)
         self.back()
-        time.sleep(10)
+        time.sleep(.1)
         self.stop()
 
     def forward_shuffle(self):
