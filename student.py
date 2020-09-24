@@ -67,8 +67,9 @@ class Piggy(PiggyParent):
         # spin around
         # lower-ordered example....
         self.forward_shuffle()
-
         time.sleep(5)
+        self.shimmy()
+        time.sleep(shimmy)
         self.stop()
         
 
