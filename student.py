@@ -62,7 +62,7 @@ class Piggy(PiggyParent):
 
         # lower-ordered example....
         self.right(primary=360, counter=90)
-        time.sleep(1)
+        time.sleep(10)
         self.stop()
         
 
