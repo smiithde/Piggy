@@ -59,13 +59,17 @@ class Piggy(PiggyParent):
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
-
+        # TODO: make up own dance 
+        # self.forward_shuffle()
+        # self.back_it_up()
+        # self.twirl(10)
+        # self.forward_shuffle()
+        # side to side head
+        # spin around
         # lower-ordered example....
         self.right(primary=360, counter=90)
         time.sleep(10)
         self.fwd()
-        time.sleep(4)
-        self.back()
         time.sleep(4)
         self.stop()
         
@@ -79,7 +83,13 @@ class Piggy(PiggyParent):
         self.deg_fwd(720)
         self.stop()
 
-
+    def forward_shuffle(self):
+        """ Walk Forward"""
+        self.fwd()
+        time.sleep(.4)
+        self.fwd()
+        time.sleep(.5)
+        self.stop()
 
     def example_move(self):
         """this is an example dance move that should be replaced by student-created content"""
