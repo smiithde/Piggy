@@ -60,7 +60,6 @@ class Piggy(PiggyParent):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
         # TODO: make up own dance 
-        # self.forward_shuffle()
         # self.back_it_up()
         # self.twirl(10)
         # self.forward_shuffle()
@@ -68,6 +67,7 @@ class Piggy(PiggyParent):
         # spin around
         # lower-ordered example....
         self.forward_shuffle()
+
         time.sleep(5)
         self.stop()
         
@@ -79,6 +79,13 @@ class Piggy(PiggyParent):
     def shake(self):
         """ Another example move """
         self.deg_fwd(720)
+        self.stop()]
+
+    def shimmy(self):
+        self.servo(1000)
+        time.sleep(8)
+        self.back()
+        time.sleep(10)
         self.stop()
 
     def forward_shuffle(self):
