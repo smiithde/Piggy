@@ -83,7 +83,7 @@ class Piggy(PiggyParent):
         self.stop()
 
     def shimmy(self):
-        self.servo(2000)
+        self.servo(1000)
         time.sleep(.1)
         self.back()
         time.sleep(.1)
