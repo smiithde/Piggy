@@ -67,10 +67,8 @@ class Piggy(PiggyParent):
         # side to side head
         # spin around
         # lower-ordered example....
-        self.right(primary=360, counter=90)
-        time.sleep(10)
-        self.fwd()
-        time.sleep(4)
+        self.forward_shuffle()
+        time.sleep(5)
         self.stop()
         
 
