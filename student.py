@@ -71,6 +71,8 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self. forward_shuffle()
         time.sleep(1)
+        self.twirl_around
+        time.sleep(1)
         self.stop()
         
 
@@ -107,7 +109,13 @@ class Piggy(PiggyParent):
             time.sleep(.5)
             self.stop()
 
-
+    def twirl_around(self):
+        for x in range(5):
+            self.turn_to_deg(180) 
+            time.sleep(1)
+            turn_by_deg(90)
+            time.sleep(1)
+            self.stop()
 
     def example_move(self):
         """this is an example dance move that should be replaced by student-created content"""
