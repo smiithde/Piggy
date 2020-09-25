@@ -88,11 +88,10 @@ class Piggy(PiggyParent):
     def shimmy(self):
         for x in range(2):
             self.servo(1000)
-            time.sleep(1)
+            time.sleep(.01)
             self.servo(2000)
             time.sleep(.35)
             self.servo(1000)
-            time.sleep(1)
             self.left()
             time.sleep(.2)
             self.right()
