@@ -71,7 +71,7 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self. forward_shuffle()
         time.sleep(1)
-        self.twirl_around
+        self.twirl_around()
         time.sleep(1)
         self.stop()
         
@@ -86,7 +86,7 @@ class Piggy(PiggyParent):
         self.stop()
 
     def shimmy(self):
-        for x in range(5):
+        for x in range(2):
             self.servo(1000)
             time.sleep(1)
             self.servo(2000)
