@@ -110,8 +110,8 @@ class Piggy(PiggyParent):
             self.stop()
 
     def twirl_around(self):
-        for d in range(5):
-            self.turn_to_deg(90) 
+        for x in range(5):
+            self.turn_by_deg(90) 
             time.sleep(1)
             self.stop()
 
