@@ -82,18 +82,19 @@ class Piggy(PiggyParent):
         self.stop()
 
     def shimmy(self):
-        self.servo(1000)
-        time.sleep(1)
-        self.servo(2000)
-        time.sleep(.35)
-        self.servo(1000)
-        self.stop()
-        self.back()
-        time.sleep(.25)
-        self.servo(2000)
-        time.sleep(.35)
-        self.servo(1000)
-        self.stop()
+        for x in range(5):
+            self.servo(1000)
+            time.sleep(1)
+            self.servo(2000)
+            time.sleep(.35)
+            self.servo(1000)
+            self.stop()
+            self.back()
+            time.sleep(.25)
+            self.servo(2000)
+            time.sleep(.35)
+            self.servo(1000)
+            self.stop()
 
     def forward_shuffle(self):
         """ Walk Forward"""
@@ -103,7 +104,7 @@ class Piggy(PiggyParent):
         time.sleep(.5)
         self.stop()
 
-    def turn_around(self):
+
 
     def example_move(self):
         """this is an example dance move that should be replaced by student-created content"""
