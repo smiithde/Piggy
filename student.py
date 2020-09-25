@@ -111,7 +111,7 @@ class Piggy(PiggyParent):
     def twirl_around(self):
         for x in range(5):
             self.turn_by_deg(180) 
-            time.sleep(1)
+            time.sleep(.01)
             self.stop()
 
     def example_move(self):
