@@ -103,7 +103,7 @@ class Piggy(PiggyParent):
         time.sleep(.5)
         self.stop()
 
-    def turn_around(self)
+    def turn_around(self):
 
     def example_move(self):
         """this is an example dance move that should be replaced by student-created content"""
