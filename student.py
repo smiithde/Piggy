@@ -69,11 +69,13 @@ class Piggy(PiggyParent):
         time.sleep(.01)
         self.shimmy()
         time.sleep(.01)
-        self. forward_shuffle()
+        self.forward_shuffle()
         time.sleep(.01)
         self.twirl_around()
         time.sleep(.01)
         self.forward_shuffle()
+        time.sleep(.01)
+        self.twirl_around()
         self.stop()
         
 
