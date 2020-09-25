@@ -72,7 +72,8 @@ class Piggy(PiggyParent):
         self. forward_shuffle()
         time.sleep(.01)
         self.twirl_around()
-        time.sleep(1)
+        time.sleep(.01)
+        self.forward_shuffle()
         self.stop()
         
 
@@ -90,11 +91,11 @@ class Piggy(PiggyParent):
             self.servo(1000)
             time.sleep(.01)
             self.servo(2000)
-            time.sleep(.35)
+            self.right()
+            time.sleep(.01)
             self.servo(1000)
             self.left()
-            time.sleep(.2)
-            self.right()
+            time.sleep(.01)
             self.stop()
             self.back()
 
