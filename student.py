@@ -59,23 +59,13 @@ class Piggy(PiggyParent):
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
-        # TODO: make up own dance 
-        # self.twirl_around(10)
-        # self.forward_shuffle()
-        # side to side head
+        # TODO: make up own dance         # self.forward_shuffle()
         # spin around
         # lower-ordered example....
-        self.forward_shuffle()
-        time.sleep(.01)
-        self.shimmy()
-        time.sleep(.01)
-        self.forward_shuffle()
-        time.sleep(.01)
-        self.twirl_around()
-        time.sleep(.01)
-        self.forward_shuffle()
-        time.sleep(.01)
-        self.twirl_around()
+        for x in range(8):
+            self.forward_shuffle()
+            self.shimmy()
+            self.twirl_around()
         self.stop()
         
 
@@ -90,20 +80,22 @@ class Piggy(PiggyParent):
 
     def shimmy(self):
         for x in range(2):
+            self.veer_left()
             self.servo(1000)
-            time.sleep(.01)
+            time.sleep(1)
+            self.veer_right()
             self.servo(2000)
-            time.sleep(.001)
-            self.right()
-            time.sleep(.01)
-            self.fwd()
-            self.servo(1000)
-            time.sleep(.001)
-            self.left()
-            time.sleep(.01)
-            self.stop()
+            time.sleep(1)
             self.back()
+            time.sleep(1)
+        self.stop()
 
+    def veer_left(self):
+        self.fwd(left=90, right=50)
+    
+    def veer_right(self):
+        self.fwd(left=50, right=90)
+   
     def forward_shuffle(self):
         """ Walk Forward"""
         for x in range(2):
@@ -114,10 +106,9 @@ class Piggy(PiggyParent):
             self.stop()
 
     def twirl_around(self):
-        for x in range(5):
-            self.turn_by_deg(180) 
-            time.sleep(.01)
-            self.stop()
+        self.left(primary=100, counter=-100)
+        time.sleep(5)
+        self.stop()
 
     def example_move(self):
         """this is an example dance move that should be replaced by student-created content"""
