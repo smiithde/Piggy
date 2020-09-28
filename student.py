@@ -65,7 +65,7 @@ class Piggy(PiggyParent):
         # TODO: make up own dance         # self.forward_shuffle()
         # spin around
         # lower-ordered example....
-        for x in range(8):
+        for x in range(2):
             self.forward_shuffle()
             self.shimmy()
             self.twirl_around()
@@ -85,10 +85,10 @@ class Piggy(PiggyParent):
         for x in range(2):
             self.veer_left()
             self.servo(1000)
-            time.sleep(1)
+            time.sleep(3)
             self.veer_right()
             self.servo(2000)
-            time.sleep(1)
+            time.sleep(3)
             self.back()
             time.sleep(1)
         self.stop()
@@ -103,9 +103,9 @@ class Piggy(PiggyParent):
         """ Walk Forward"""
         for x in range(2):
             self.fwd()
-            time.sleep(.4)
+            time.sleep(.1)
             self.fwd()
-            time.sleep(.5)
+            time.sleep(.1)
             self.stop()
 
     def twirl_around(self):
