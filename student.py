@@ -32,7 +32,7 @@ class Piggy(PiggyParent):
     def menu(self):
         #NEED Docstring Comments for all of the Dance moves must be specific
         ## Has to summerize what it does
-        ###Also explain everything that is happening
+        ###Also explain everything that is happening and leave comments for everything 
         """Displays menu dictionary, takes key-input and calls method"""
         ## This is a DICTIONARY, it's a list with custom index values. Python is cool.
         # Please feel free to change the menu and add options.
