@@ -85,7 +85,6 @@ class Piggy(PiggyParent):
         for x in range(2):
             self.servo(1000)
             self.veer_left()
-            time.sleep(1)
             self.servo(2000)
             self.veer_right()
             time.sleep(1)
