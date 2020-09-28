@@ -103,9 +103,9 @@ class Piggy(PiggyParent):
         """ Walk Forward"""
         for x in range(2):
             self.fwd()
-            time.sleep(.1)
+            time.sleep(.01)
             self.fwd()
-            time.sleep(.1)
+            time.sleep(.01)
             self.stop()
 
     def twirl_around(self):
