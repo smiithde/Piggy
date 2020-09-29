@@ -65,11 +65,12 @@ class Piggy(PiggyParent):
         if not self.safe_to_dance():
             return False #SHUT THE DANCE DOWN
         # TODO: make up own dance         # self.forward_shuffle()
-        # spin around
         # lower-ordered example....
-        for x in range(2):
+        for x in range(3):
             self.forward_shuffle()
             self.shimmy()
+            self.twirl_around()
+            self.twirl_around()
             self.twirl_around()
         self.stop()
         
