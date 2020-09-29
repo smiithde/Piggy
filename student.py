@@ -70,7 +70,9 @@ class Piggy(PiggyParent):
             self.forward_shuffle()
             self.shimmy()
             self.twirl_around()
-            self.example_move()
+            self.swerve_right()
+        #TODO: center itself right here
+            self.swerve_left()
         self.stop()
         
 
@@ -129,14 +131,23 @@ class Piggy(PiggyParent):
         time.sleep(5)
         self.stop()
 
-    def example_move(self):
-        """this is an example dance move that should be replaced by student-created content"""
+    def swerve_right(self):
+        """ Turns to the right in a circular position"""
         self.right() # start rotating right
-        time.sleep(1) # turn for a second
+        time.sleep(.95) # turn for a second
         self.stop() # stop
         self.servo(1000) # look right
-        time.sleep(.25) # give your head time to move
+        time.sleep(.2) # give your head time to move
         self.servo(2000) # look left
+    
+    def swerve_left(self):
+        """ Turns to the left in a circular position"""
+        self.left()
+        time.sleep(.95)
+        self.stop()
+        self.servo(2000)
+        time.sleep(.2)
+        self.servo(1000)
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
