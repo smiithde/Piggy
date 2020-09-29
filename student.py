@@ -71,7 +71,8 @@ class Piggy(PiggyParent):
             self.shimmy()
             self.twirl_around()
             self.swerve_right()
-        #TODO: center itself right here
+            self.swerve_left()
+            self.swerve_right()
             self.swerve_left()
         self.stop()
         
@@ -133,12 +134,12 @@ class Piggy(PiggyParent):
 
     def swerve_right(self):
         """ Turns to the right in a circular position"""
-        self.right() # start rotating right
-        time.sleep(.95) # turn for a second
-        self.stop() # stop
-        self.servo(1000) # look right
-        time.sleep(.2) # give your head time to move
-        self.servo(2000) # look left
+        self.right() 
+        time.sleep(.95) 
+        self.stop()
+        self.servo(1000) 
+        time.sleep(.2) 
+        self.servo(2000)
     
     def swerve_left(self):
         """ Turns to the left in a circular position"""
