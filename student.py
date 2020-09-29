@@ -74,6 +74,8 @@ class Piggy(PiggyParent):
             self.swerve_left()
             self.swerve_right()
             self.swerve_left()
+        # TODO: combine swerves and make it go for 3 times
+        # TODO: lessen distance for forward 
         self.stop()
         
 
@@ -140,6 +142,7 @@ class Piggy(PiggyParent):
         self.servo(1000) 
         time.sleep(.2) 
         self.servo(2000)
+        
     
     def swerve_left(self):
         """ Turns to the left in a circular position"""
