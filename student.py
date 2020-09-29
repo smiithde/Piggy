@@ -66,7 +66,7 @@ class Piggy(PiggyParent):
             return False #SHUT THE DANCE DOWN
         # TODO: make up own dance         # self.forward_shuffle()
         # lower-ordered example....
-        for x in range(3):
+        for x in range(2):
             self.forward_shuffle()
             self.shimmy()
             self.twirl_around()
