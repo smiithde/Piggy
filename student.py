@@ -70,6 +70,7 @@ class Piggy(PiggyParent):
             self.forward_shuffle()
             self.shimmy()
             self.twirl_around()
+            self.example_move
         self.stop()
         
 
@@ -94,10 +95,10 @@ class Piggy(PiggyParent):
     def shimmy(self):
         """ Shaking both the head and body in opposite directions while moving forward"""
         for x in range(2):
-            self.servo(1000) # moving the head to the left
+            self.servo(1000) # moving the head to the right
             self.veer_left()
             time.sleep(.1)
-            self.servo(2000) # moving the head to the right 
+            self.servo(2000) # moving the head to the left 
             time.sleep(.1) #giving it time to process what is happening and move
             self.servo(1000)
             self.veer_right()
