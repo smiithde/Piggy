@@ -70,8 +70,6 @@ class Piggy(PiggyParent):
             self.forward_shuffle()
             self.shimmy()
             self.twirl_around()
-            self.twirl_around()
-            self.twirl_around()
         self.stop()
         
 
@@ -94,12 +92,13 @@ class Piggy(PiggyParent):
         self.stop()
 
     def shimmy(self):
+        """ Shaking both the head and body in opposite directions while moving forward"""
         for x in range(2):
-            self.servo(1000)
+            self.servo(1000) # moving the head to the left
             self.veer_left()
             time.sleep(.1)
-            self.servo(2000)
-            time.sleep(.1)
+            self.servo(2000) # moving the head to the right 
+            time.sleep(.1) #giving it time to process what is happening and move
             self.servo(1000)
             self.veer_right()
             self.servo(2000)
@@ -109,9 +108,11 @@ class Piggy(PiggyParent):
         self.stop()
 
     def veer_left(self):
+        """ Shifting Lower Body to the Left"""
         self.fwd(left=90, right=50)
     
     def veer_right(self):
+        """ Shifting Lower Body to the Right """
         self.fwd(left=50, right=90)
    
     def forward_shuffle(self):
@@ -122,6 +123,7 @@ class Piggy(PiggyParent):
             self.stop()
 
     def twirl_around(self):
+        """Spinning around in a complete circle"""
         self.left(primary=100, counter=-100)
         time.sleep(5)
         self.stop()
