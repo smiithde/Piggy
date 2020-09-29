@@ -68,21 +68,26 @@ class Piggy(PiggyParent):
         # lower-ordered example....
         for x in range(2):
             self.forward_shuffle()
+            self.square()
             self.shimmy()
             self.twirl_around()
-            self.swerve_right()
-            self.swerve_left()
-            self.swerve_right()
-            self.swerve_left()
-        # TODO: combine swerves and make it go for 3 times
+            for _ in range(3):
+                self.swerve_right()
+                self.swerve_left()
+                self.swerve_right()
+                self.swerve_left()
         # TODO: lessen distance for forward 
         self.stop()
         
+    def square(self):
+        for _ in range(4):
+            self.forward_shuffle()
+            self.turn_by_deg(90)
 
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
         # check for all fail/early-termination conditions
-        for x in range(4):
+        for _ in range(4):
             if self.read_distance() < 300:
                 print("NOT SAFE TO DANCE!")
                 return False
@@ -124,7 +129,7 @@ class Piggy(PiggyParent):
     def forward_shuffle(self):
         """ Walk Forward"""
         for x in range(2):
-            self.fwd()
+            self.deg_fwd(360)
             time.sleep(.01)
             self.stop()
 
