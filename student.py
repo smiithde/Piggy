@@ -70,7 +70,7 @@ class Piggy(PiggyParent):
             self.forward_shuffle()
             self.shimmy()
             self.twirl_around()
-            self.example_move
+            self.example_move()
         self.stop()
         
 
