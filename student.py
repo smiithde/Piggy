@@ -71,12 +71,10 @@ class Piggy(PiggyParent):
             self.square()
             self.shimmy()
             self.twirl_around()
-            for _ in range(3):
+            for _ in range(2):
                 self.swerve_right()
                 self.swerve_left()
-                self.swerve_right()
-                self.swerve_left()
-        # TODO: lessen distance for forward 
+    
         self.stop()
         
     def square(self):
@@ -128,10 +126,11 @@ class Piggy(PiggyParent):
    
     def forward_shuffle(self):
         """ Walk Forward"""
-        for x in range(2):
+        for x in range(1):
             self.deg_fwd(360)
             time.sleep(.01)
             self.stop()
+            self.back()
 
     def twirl_around(self):
         """Spinning around in a complete circle"""
@@ -147,7 +146,6 @@ class Piggy(PiggyParent):
         self.servo(1000) 
         time.sleep(.2) 
         self.servo(2000)
-        
     
     def swerve_left(self):
         """ Turns to the left in a circular position"""
