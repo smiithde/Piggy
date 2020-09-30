@@ -130,7 +130,13 @@ class Piggy(PiggyParent):
             self.deg_fwd(360)
             time.sleep(.01)
             self.stop()
-            self.back()
+    
+    def moon_walk(self):
+        "Walking Backward"
+        for _ in range(2):
+            self.back
+            time.sleep(1)
+            self.stop()
 
     def twirl_around(self):
         """Spinning around in a complete circle"""
