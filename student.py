@@ -127,15 +127,15 @@ class Piggy(PiggyParent):
     def forward_shuffle(self):
         """ Walk Forward"""
         for x in range(1):
-            self.deg_fwd(180)
+            self.deg_fwd(90)
             time.sleep(.01)
             self.stop()
     
     def moon_walk(self):
         "Walking Backward"
         for _ in range(2):
-            self.back
-            time.sleep(1)
+            self.back()
+            time.sleep(.01)
             self.stop()
 
     def twirl_around(self):
