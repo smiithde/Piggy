@@ -80,7 +80,7 @@ class Piggy(PiggyParent):
     def square(self):
         for _ in range(4):
             self.forward_shuffle()
-            self.turn_by_deg(90)
+            self.turn_by_deg(360)
 
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
