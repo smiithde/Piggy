@@ -86,9 +86,9 @@ class Piggy(PiggyParent):
     def side_to_side(self):
         for _ in range(4):
             self.servo(1000)
-            time.sleep(1)
+            time.sleep(.5)
             self.servo(2000)
-            time.sleep(1)
+            time.sleep(.5)
             self.stop()
 
     def safe_to_dance(self):
@@ -114,15 +114,13 @@ class Piggy(PiggyParent):
         for x in range(2):
             self.servo(1000) # moving the head to the right
             self.veer_left()
-            time.sleep(.1)
+            time.sleep(.5)
             self.servo(2000) # moving the head to the left 
-            time.sleep(.1) #giving it time to process what is happening and move
+            time.sleep(.5) #giving it time to process what is happening and move
             self.servo(1000)
             self.veer_right()
             self.servo(2000)
-            time.sleep(1)
-            self.back()
-            time.sleep(.01)
+            time.sleep(.5)
         self.stop()
 
     def veer_left(self):
