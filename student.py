@@ -86,7 +86,9 @@ class Piggy(PiggyParent):
     def side_to_side(self):
         for _ in range(4):
             self.servo(1000)
+            time.sleep(1)
             self.servo(2000)
+            time.sleep(1)
             self.stop()
 
     def safe_to_dance(self):
