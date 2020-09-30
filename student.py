@@ -74,6 +74,7 @@ class Piggy(PiggyParent):
             for _ in range(2):
                 self.swerve_right()
                 self.swerve_left()
+                self.moon_walk()
     
         self.stop()
         
