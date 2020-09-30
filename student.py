@@ -64,7 +64,6 @@ class Piggy(PiggyParent):
 
         if not self.safe_to_dance():
             return False #SHUT THE DANCE DOWN
-        # TODO: make up own dance         # self.forward_shuffle()
         # lower-ordered example....
         for x in range(2):
             self.forward_shuffle()
@@ -128,7 +127,7 @@ class Piggy(PiggyParent):
     def forward_shuffle(self):
         """ Walk Forward"""
         for x in range(1):
-            self.deg_fwd(360)
+            self.deg_fwd(180)
             time.sleep(.01)
             self.stop()
     
