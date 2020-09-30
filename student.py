@@ -155,7 +155,6 @@ class Piggy(PiggyParent):
         """ Turns to the right in a circular position"""
         self.right() 
         time.sleep(.95) 
-        self.stop()
         self.servo(1000) 
         time.sleep(.2) 
         self.servo(2000)
@@ -164,7 +163,6 @@ class Piggy(PiggyParent):
         """ Turns to the left in a circular position"""
         self.left()
         time.sleep(.95)
-        self.stop()
         self.servo(2000)
         time.sleep(.2)
         self.servo(1000)
