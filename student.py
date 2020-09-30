@@ -65,7 +65,8 @@ class Piggy(PiggyParent):
         if not self.safe_to_dance():
             return False #SHUT THE DANCE DOWN
         # lower-ordered example....
-        for x in range(2):
+        for x in range(1):
+            self.side_to_side()
             self.moon_walk()
             self.forward_shuffle()
             self.square()
@@ -81,6 +82,12 @@ class Piggy(PiggyParent):
         for _ in range(4):
             self.forward_shuffle()
             self.turn_by_deg(360)
+    
+    def side_to_side(self):
+        for _ in range(4):
+            self.servo(1000)
+            self.servo(2000)
+            self.stop()
 
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
