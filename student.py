@@ -86,9 +86,9 @@ class Piggy(PiggyParent):
     def side_to_side(self):
         for _ in range(4):
             self.servo(1000)
-            time.sleep(.5)
+            time.sleep(.3)
             self.servo(2000)
-            time.sleep(.5)
+            time.sleep(.3)
             self.stop()
 
     def safe_to_dance(self):
@@ -111,7 +111,7 @@ class Piggy(PiggyParent):
 
     def shimmy(self):
         """ Shaking both the head and body in opposite directions while moving forward"""
-        for x in range(2):
+        for x in range(1):
             self.servo(1000) # moving the head to the right
             self.veer_left()
             time.sleep(.5)
