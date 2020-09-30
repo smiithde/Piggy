@@ -65,7 +65,7 @@ class Piggy(PiggyParent):
         if not self.safe_to_dance():
             return False #SHUT THE DANCE DOWN
         # lower-ordered example....
-        for x in range(1):
+        for x in range(2):
             self.side_to_side()
             self.moon_walk()
             self.forward_shuffle()
@@ -138,7 +138,7 @@ class Piggy(PiggyParent):
         for x in range(1):
             self.deg_fwd(90)
             time.sleep(.01)
-            self.stop()
+
     
     def moon_walk(self):
         "Walking Backward"
