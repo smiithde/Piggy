@@ -66,6 +66,7 @@ class Piggy(PiggyParent):
             return False #SHUT THE DANCE DOWN
         # lower-ordered example....
         for x in range(2):
+            self.moon_walk()
             self.forward_shuffle()
             self.square()
             self.shimmy()
@@ -73,8 +74,7 @@ class Piggy(PiggyParent):
             for _ in range(2):
                 self.swerve_right()
                 self.swerve_left()
-                self.moon_walk()
-    
+                
         self.stop()
         
     def square(self):
