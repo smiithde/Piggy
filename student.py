@@ -135,7 +135,7 @@ class Piggy(PiggyParent):
         "Walking Backward"
         for _ in range(2):
             self.back()
-            time.sleep(.01)
+            time.sleep(1)
             self.stop()
 
     def twirl_around(self):
