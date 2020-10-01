@@ -74,12 +74,26 @@ class Piggy(PiggyParent):
             self.sprinkler()
             self.twirl_around()
             self.moon_walk()
+            self.forward_skipp
             for _ in range(2):
                 self.swerve_right()
-                self.swerve_left()
-                
+                self.swerve_left()     
         self.stop()
-        
+
+    def forward_skipp(self):
+        """this is my first move"""
+            for x in range(4):
+                self.fwd(right=100, left=100)
+                time.sleep(.5)
+                self.servo(1000)
+                time.sleep(.1)
+                self.servo(2000)
+                time.sleep(.1)
+                self.fwd(right=-100, left=-100)
+                time.sleep(.1)
+                self.servo(-1000)
+        self.stop()
+
     def square(self):
         for _ in range(4):
             self.forward_shuffle()
