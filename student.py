@@ -73,6 +73,7 @@ class Piggy(PiggyParent):
             self.shimmy()
             self.sprinkler()
             self.twirl_around()
+            self.moon_walk()
             for _ in range(2):
                 self.swerve_right()
                 self.swerve_left()
@@ -137,10 +138,10 @@ class Piggy(PiggyParent):
         "Stops at each point and shakes head"
         for angle in range(20, 200, 20):
             self.turn_by_deg(angle)
-            time.sleep(.5)
+            time.sleep(.1)
             self.servo(1000)
             self.servo(2000)
-            time.sleep(1)
+            time.sleep(.1)
         self.stop()
    
     def forward_shuffle(self):
