@@ -74,7 +74,7 @@ class Piggy(PiggyParent):
             self.sprinkler()
             self.twirl_around()
             self.moon_walk()
-            self.forward_skipp
+            self.forward_skipp()
             for _ in range(2):
                 self.swerve_right()
                 self.swerve_left()     
