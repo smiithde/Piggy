@@ -83,7 +83,7 @@ class Piggy(PiggyParent):
 # Brennen's wheelie method
     def wheelie(self):
         """ Leaps forward / almost like a wheelie """
-        for x in range(4):
+        for _ in range(4):
             self.fwd(right=90, left=90)
             time.sleep(.5)
             self.servo(1000)
