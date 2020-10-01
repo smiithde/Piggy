@@ -71,6 +71,7 @@ class Piggy(PiggyParent):
             self.forward_shuffle()
             self.square()
             self.shimmy()
+            self.sprinkler()
             self.twirl_around()
             for _ in range(2):
                 self.swerve_right()
@@ -131,6 +132,23 @@ class Piggy(PiggyParent):
     def veer_right(self):
         """ Shifting Lower Body to the Right """
         self.fwd(left=50, right=90)
+
+    def sprinkler(self):
+        "Stops at each point and shakes head"
+        self.turn_by_deg(20)
+        time.sleep(.5)
+        self.turn_by_deg(40)
+        time.sleep(.5)
+        self.turn_by_deg(60)
+        time.sleep(.5)
+        self.turn_by_deg(80)
+        time.sleep(.5)
+        self.turn_by_deg(100)
+        time.sleep(.5)
+        self.turn_by_deg(120)
+        time.sleep(.5)
+        self.turn_by_deg(200)
+        self.stop()
    
     def forward_shuffle(self):
         """ Walk Forward"""
