@@ -96,11 +96,13 @@ class Piggy(PiggyParent):
         self.stop()
 
     def square(self):
+        """ Goes in a four corner direction """
         for _ in range(4):
             self.forward_shuffle()
             self.turn_by_deg(360)
     
     def side_to_side(self):
+        """ Moves head left and right """
         for _ in range(4):
             self.servo(1000)
             time.sleep(.3)
