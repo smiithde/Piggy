@@ -137,9 +137,10 @@ class Piggy(PiggyParent):
         "Stops at each point and shakes head"
         for angle in range(20, 200, 20):
             self.turn_by_deg(angle)
+            time.sleep(.5)
             self.servo(1000)
             self.servo(2000)
-            time.sleep(.75)
+            time.sleep(1)
         self.stop()
    
     def forward_shuffle(self):
