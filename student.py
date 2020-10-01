@@ -170,7 +170,7 @@ class Piggy(PiggyParent):
     def forward_shuffle(self):
         """ Walk Forward"""
         for x in range(1):
-            self.deg_fwd(90)
+            self.deg_fwd(180)
             time.sleep(.01)
 
     
