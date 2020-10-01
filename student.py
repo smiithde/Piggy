@@ -122,7 +122,8 @@ class Piggy(PiggyParent):
             time.sleep(.5)
             self.servo(2000)
             time.sleep(.5)
-            
+            self.stop()
+
     def veer_left(self):
         """ Shifting Lower Body to the Left"""
         self.fwd(left=90, right=50)
