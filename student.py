@@ -84,7 +84,7 @@ class Piggy(PiggyParent):
     def wheelie(self):
         """ Leaps forward / almost like a wheelie """
         for x in range(4):
-            self.fwd(right=100, left=100)
+            self.fwd(right=90, left=90)
             time.sleep(.5)
             self.servo(1000)
             time.sleep(.1)
