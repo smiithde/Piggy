@@ -64,7 +64,6 @@ class Piggy(PiggyParent):
 
         if not self.safe_to_dance():
             return False #SHUT THE DANCE DOWN
-        # lower-ordered example....
         for _ in range(2):
             self.side_to_side()
             self.moon_walk()
@@ -152,7 +151,7 @@ class Piggy(PiggyParent):
         self.fwd(left=50, right=90)
 
     def sprinkler(self):
-        "Stops at each point and shakes head"
+       """Stops at each point and shakes head"""
         for angle in range(20, 200, 20):
             self.turn_by_deg(angle)
             time.sleep(.1)
