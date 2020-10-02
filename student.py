@@ -151,7 +151,7 @@ class Piggy(PiggyParent):
         self.fwd(left=50, right=90)
 
     def sprinkler(self):
-       """Stops at each point and shakes head"""
+        """ Stops at each point and shakes head """
         for angle in range(20, 200, 20):
             self.turn_by_deg(angle)
             time.sleep(.1)
