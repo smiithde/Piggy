@@ -19,7 +19,7 @@ class Piggy(PiggyParent):
         '''
         self.LEFT_DEFAULT = 80
         self.RIGHT_DEFAULT = 85
-        self.SAFE_DISTANCE = 300
+        self.SAFE_DISTANCE = 250 #<-- change this number as needed
         self.CLOSE_DISTANCE = 150
         self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
@@ -215,8 +215,15 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         
         # TODO: build self.quick_check() that does a fast, 3-part check instead of read_distance
-        while self.read_distance() > 250:  # TODO: fix this magic number
-            self.fwd()
+        self.fwd()
+        while True:
+            if self.read_distance() < self.SAFE_DISTANCE: 
+                self.stop()
+                print("OH NO!!!! Something is in my way!!")
+                self.turn_by_deg(90)
+                time.sleep(.1)
+            else:
+                self.fwd()
             time.sleep(.01)
         self.stop()
         # TODO: scan so we can decide left or right
