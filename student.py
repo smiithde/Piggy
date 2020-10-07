@@ -228,7 +228,6 @@ class Piggy(PiggyParent):
         while self.read_distance() < self.SAFE_DISTANCE:
             self.left(primary=40, counter=-40)
             time.sleep(.05)
-
         # stop motion before we end the method
         self.stop()
 
