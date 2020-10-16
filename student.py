@@ -283,7 +283,7 @@ class Piggy(PiggyParent):
         # stop motion before we end the method
         self.stop()
 
-     def turn_right_until_clear(self):
+    def turn_right_until_clear(self):
         """ Rotate right until no obstacle is seen """
         print("----TURNING UNTIL CLEAR!!!----")
         # make sure we're looking straight
