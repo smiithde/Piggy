@@ -263,7 +263,7 @@ class Piggy(PiggyParent):
         """ Moves the servo to three angles and performs a distance check """
         #Write a better docustring
         #loop three times and move the servo
-        for ang in range(self.MIDPOINT - 100, self.MIDPOINT + 101, 100):
+        for ang in range(self.MIDPOINT - 200, self.MIDPOINT + 201, 200):
             self.servo(ang)
             time.sleep(.1)
             if self.read_distance() <self.CLOSE_DISTANCE + 100:
