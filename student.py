@@ -291,7 +291,7 @@ class Piggy(PiggyParent):
         # 
         exit_angle = self.get_heading()
         # because I've written down the exit's angle, at anytime  I can use:
-        self.turn_to_deg(exit_angle)
+        # self.turn_to_deg(exit_ang)
         turn_count = 0
         while True:
             if not self.quick_check():
