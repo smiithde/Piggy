@@ -266,7 +266,7 @@ class Piggy(PiggyParent):
         for ang in range(self.MIDPOINT - 200, self.MIDPOINT + 201, 200):
             self.servo(ang)
             time.sleep(.1)
-            if self.read_distance() <self.CLOSE_DISTANCE + 100:
+            if self.read_distance() < self.CLOSE_DISTANCE:
                 return False
         # if the three-part check didn't freak out 
         return True
@@ -277,13 +277,13 @@ class Piggy(PiggyParent):
         # make sure we're looking straight
         self.servo(self.MIDPOINT)
         # so long as we see something close, keep turning left
-        while self.read_distance() < self.SAFE_DISTANCE:
+        while self.read_distance() < self.SAFE_DISTANCE + 100:
             self.left(primary=40, counter=-40)
             time.sleep(.05)
         # stop motion before we end the method
         self.stop()
         self.turn_by_deg(-20)
-        time.sleep(.5)
+        
 
     def turn_right_until_clear(self):
         """ Rotate right until no obstacle is seen """
@@ -291,13 +291,13 @@ class Piggy(PiggyParent):
         # make sure we're looking straight
         self.servo(self.MIDPOINT)
         # so long as we see something close, keep turning left
-        while self.read_distance() < self.SAFE_DISTANCE:
+        while self.read_distance() < self.SAFE_DISTANCE + 100:
             self.right(primary=40, counter=-40)
             time.sleep(.05)
         # stop motion before we end the method
         self.stop
         self.turn_by_deg(20)
-        time.sleep(.5)
+        
 
     def nav(self):
         """  Auto-pilot program """
