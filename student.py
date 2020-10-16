@@ -266,7 +266,7 @@ class Piggy(PiggyParent):
         for ang in range(self.MIDPOINT - 200, self.MIDPOINT + 201, 200):
             self.servo(ang)
             time.sleep(.1)
-            if self.read_distance() < self.CLOSE_DISTANCE:
+            if self.read_distance() < self.SAFE_DISTANCE:
                 return False
         # if the three-part check didn't freak out 
         return True
