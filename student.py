@@ -266,7 +266,7 @@ class Piggy(PiggyParent):
         for ang in range(self.MIDPOINT - 100, self.MIDPOINT + 101, 100):
             self.servo(ang)
             time.sleep(.1)
-            if self.read_distance() <self.SAFE_DISTANCE:
+            if self.read_distance() <self.SAFE_DISTANCE + 100:
                 return False
         # if the three-part check didn't freak out 
         return True
@@ -288,14 +288,19 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
-     
+        # 
         exit_angle = self.get_heading()
+        # because I've written down the exit's angle, at anytime  I can use:
+        # self.turn_to_deg(exit_ang)
         turn_count = 0
         while True:
-            if not self.quick_check(): 
+            if not self.quick_check():
+                turn_count += 1
                 self.stop()
                 # self.turn_until_clear()
-                if 'l' in self.right_or_left():
+                if turn_count > 3 and turn_count % 5 == 0:
+                    self.turn_to_deg(exit_ang)
+                elif 'l' in self.right_or_left():
                     self.turn_by_deg(-45)
                 else:  
                     self.turn_by_deg(45)
