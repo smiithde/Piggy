@@ -283,6 +283,7 @@ class Piggy(PiggyParent):
         # stop motion before we end the method
         self.stop()
         self.turn_by_deg(-20)
+        time.sleep(.5)
 
     def turn_right_until_clear(self):
         """ Rotate right until no obstacle is seen """
@@ -296,6 +297,7 @@ class Piggy(PiggyParent):
         # stop motion before we end the method
         self.stop
         self.turn_by_deg(20)
+        time.sleep(.5)
 
     def nav(self):
         """  Auto-pilot program """
