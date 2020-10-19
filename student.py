@@ -270,7 +270,7 @@ class Piggy(PiggyParent):
                 return False
         # if the three-part check didn't freak out 
         return True
-
+# trying to make it move in
     def turn_left_until_clear(self):
         """ Rotate right until no obstacle is seen """
         print("----TURNING UNTIL CLEAR!!!----")
@@ -314,7 +314,7 @@ class Piggy(PiggyParent):
                 turn_count += 1
                 self.stop()
                 self.back()
-                time.sleep(.8)
+                time.sleep(.7)
                 self.stop()
                 if turn_count > 3 and turn_count % 5 == 0:
                     self.turn_to_deg(exit_angle)
