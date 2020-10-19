@@ -325,6 +325,7 @@ class Piggy(PiggyParent):
                 turn_count += 1
 
             else:
+                self.scan
                 self.fwd()
     
         # TODO: scan so we can decide left or right
