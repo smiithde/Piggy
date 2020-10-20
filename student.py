@@ -275,10 +275,11 @@ class Piggy(PiggyParent):
     def backward_check(self):
         "Rotates in a 180 degree turn to stop it from hitting something behind it"
         print("----TURNING AND CHECKING THAT IT IS CLEAR!!!----")
-        self.turn_left_until_clear()
-        self.scan
-        self.turn_right_until_clear()
-        self.back()
+        self.turn_by_deg(180)
+        if self.quick_check():
+            self.deg_fwd(520)
+        self.turn_by_deg(180)
+    
     def turn_left_until_clear(self):
         """ Rotate right until no obstacle is seen """
         print("----TURNING UNTIL CLEAR!!!----")
