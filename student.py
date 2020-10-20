@@ -277,7 +277,8 @@ class Piggy(PiggyParent):
         print("----TURNING AND CHECKING THAT IT IS CLEAR!!!----")
         self.turn_by_deg(180)
         if self.quick_check():
-            self.deg_fwd(520)
+            self.fwd()
+            time.sleep(1)
         self.turn_by_deg(180)
     
     def turn_left_until_clear(self):
