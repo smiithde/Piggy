@@ -20,8 +20,8 @@ class Piggy(PiggyParent):
         '''
         self.LEFT_DEFAULT = 80
         self.RIGHT_DEFAULT = 85
-        self.SAFE_DISTANCE = 200 #<-- change this number as needed
-        self.CLOSE_DISTANCE = 40
+        self.SAFE_DISTANCE = 250 #<-- change this number as needed
+        self.CLOSE_DISTANCE = 50
         self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
@@ -270,7 +270,7 @@ class Piggy(PiggyParent):
                 return False
         # if the three-part check didn't freak out 
         return True
-# TODO
+#TODO
 # trying to make it move in a circle to check all primeters before going backwards
     def turn_left_until_clear(self):
         """ Rotate right until no obstacle is seen """
