@@ -20,7 +20,7 @@ class Piggy(PiggyParent):
         '''
         self.LEFT_DEFAULT = 80
         self.RIGHT_DEFAULT = 85
-        self.SAFE_DISTANCE = 230 #<-- change this number as needed
+        self.SAFE_DISTANCE = 225 #<-- change this number as needed
         self.CLOSE_DISTANCE = 50
         self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
