@@ -270,6 +270,7 @@ class Piggy(PiggyParent):
                 return False
         # if the three-part check didn't freak out 
         return True
+# TODO
 # trying to make it move in a circle to check all primeters before going backwards
     def turn_left_until_clear(self):
         """ Rotate right until no obstacle is seen """
