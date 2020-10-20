@@ -272,6 +272,13 @@ class Piggy(PiggyParent):
         return True
 #TODO
 # trying to make it move in a circle to check all primeters before going backwards
+    def backward_check(self):
+        "Rotates in a 180 degree turn to stop it from hitting something behind it"
+        print("----TURNING AND CHECKING THAT IT IS CLEAR!!!----")
+        self.turn_left_until_clear(180)
+        self.scan
+        self.swerve_right(180)
+        self.back()
     def turn_left_until_clear(self):
         """ Rotate right until no obstacle is seen """
         print("----TURNING UNTIL CLEAR!!!----")
@@ -314,10 +321,10 @@ class Piggy(PiggyParent):
             if not self.quick_check():
                 turn_count += 1
                 self.stop()
-                self.back()
+                self.backward_check()
                 time.sleep(1)
                 self.stop()
-                if turn_count > 3 and turn_count % 4 == 0:
+                if turn_count > 4 and turn_count % 5 == 0:
                     self.turn_to_deg(exit_angle)
                 elif 'l' in self.right_or_left():
                     self.turn_left_until_clear()
