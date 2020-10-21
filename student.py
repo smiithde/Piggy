@@ -315,7 +315,6 @@ class Piggy(PiggyParent):
                 self.stop()
                 self.back()
                 time.sleep(1)
-                self.exit_angle()
                 self.stop()
                 if turn_count > 4 and turn_count % 5 == 0:
                     self.turn_to_deg(exit_angle)
@@ -326,6 +325,7 @@ class Piggy(PiggyParent):
                 turn_count += 1
 
             else:
+                self.turn_by_deg(exit_angle)
                 self.fwd(left = 100, right = 100)
     
         # TODO: scan so we can decide left or right
