@@ -326,6 +326,7 @@ class Piggy(PiggyParent):
 
             else:
                 self.turn_by_deg(exit_angle)
+                time.sleep(.5)
                 self.fwd(left = 100, right = 100)
     
         # TODO: scan so we can decide left or right
