@@ -277,12 +277,12 @@ class Piggy(PiggyParent):
         # make sure we're looking straight
         self.servo(self.MIDPOINT)
         # so long as we see something close, keep turning left
-        while self.read_distance() < self.SAFE_DISTANCE + 100:
+        while self.read_distance() < self.SAFE_DISTANCE + 200:
             self.left(primary=50, counter=-50)
             time.sleep(.05)
         # stop motion before we end the method
         self.stop()
-        self.turn_by_deg(-25)
+        self.turn_by_deg(-45)
         input("Press enter to continue")
         
 
@@ -292,12 +292,12 @@ class Piggy(PiggyParent):
         # make sure we're looking straight
         self.servo(self.MIDPOINT)
         # so long as we see something close, keep turning left
-        while self.read_distance() < self.SAFE_DISTANCE + 100:
+        while self.read_distance() < self.SAFE_DISTANCE + 200:
             self.right(primary=50, counter=-50)
             time.sleep(.05)
         # stop motion before we end the method
         self.stop
-        self.turn_by_deg(25)
+        self.turn_by_deg(45)
         input("Press enter to continue")
         
 
