@@ -283,6 +283,7 @@ class Piggy(PiggyParent):
         # stop motion before we end the method
         self.stop()
         self.turn_by_deg(-25)
+        input("Press enter to continue")
         
 
     def turn_right_until_clear(self):
@@ -297,6 +298,7 @@ class Piggy(PiggyParent):
         # stop motion before we end the method
         self.stop
         self.turn_by_deg(25)
+        input("Press enter to continue")
         
 
     def nav(self):
@@ -308,10 +310,8 @@ class Piggy(PiggyParent):
         exit_angle = self.get_heading()
         # because I've written down the exit's angle, at anytime  I can use:
         # self.turn_to_deg(exit_ang)
-        turn_count = 0
         while True:
             if not self.quick_check():
-                turn_count += 1
                 self.stop()
                 self.back()
                 time.sleep(1)
@@ -321,8 +321,6 @@ class Piggy(PiggyParent):
                     self.turn_left_until_clear()
                 else:
                     self.turn_right_until_clear()
-                turn_count += 1
-
             else:
                 self.fwd(left = 100, right = 100)
         
