@@ -282,7 +282,7 @@ class Piggy(PiggyParent):
             time.sleep(.05)
         # stop motion before we end the method
         self.stop()
-        self.turn_by_deg(-45)
+        self.turn_by_deg(-25)
         input("Press enter to continue")
         
 
@@ -297,7 +297,7 @@ class Piggy(PiggyParent):
             time.sleep(.05)
         # stop motion before we end the method
         self.stop
-        self.turn_by_deg(45)
+        self.turn_by_deg(25)
         input("Press enter to continue")
         
 
