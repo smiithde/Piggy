@@ -316,7 +316,8 @@ class Piggy(PiggyParent):
                 self.back()
                 time.sleep(1)
                 self.stop()
-                if turn_count > 0 and turn_count % 1 == 0:
+                if turn_count > 4 and turn_count % 5 == 0:
+#TODO:have it go everytime
                     self.turn_to_deg(exit_angle)
                 elif 'l' in self.right_or_left():
                     self.turn_left_until_clear()
@@ -326,12 +327,7 @@ class Piggy(PiggyParent):
 
             else:
                 self.turn_by_deg(exit_angle)
-                time.sleep(.5)
                 self.fwd(left = 100, right = 100)
-    
-        # TODO: scan so we can decide left or right
-        # TODO: average the right side of the scan dict
-        # TODO: average the left side of the scan dict
         
 
 
