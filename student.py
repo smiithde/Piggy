@@ -297,7 +297,7 @@ class Piggy(PiggyParent):
             time.sleep(.05)
         # stop motion before we end the method
         self.stop
-        self.turn_by_deg(45)
+        self.turn_by_deg(25)
         input("Press enter to continue")
         
 
@@ -317,7 +317,9 @@ class Piggy(PiggyParent):
                 time.sleep(1)
                 self.stop()
                 self.turn_to_deg(exit_angle)
-                if 'l' in self.right_or_left():
+                if self.quick_check():
+                    self.fwd()
+                elif 'l' in self.right_or_left():
                     self.turn_left_until_clear()
                 else:
                     self.turn_right_until_clear()
