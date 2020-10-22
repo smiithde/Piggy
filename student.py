@@ -317,9 +317,9 @@ class Piggy(PiggyParent):
                 time.sleep(1)
                 self.stop()
                 self.turn_to_deg(exit_angle)
-                elif 'l' in self.right_or_left():
+                if 'l' in self.right_or_left():
                     self.turn_left_until_clear()
-                else:
+                elif:
                     self.turn_right_until_clear()
                 turn_count += 1
 
