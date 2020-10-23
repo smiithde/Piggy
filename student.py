@@ -314,7 +314,7 @@ class Piggy(PiggyParent):
             if not self.quick_check():
                 self.stop()
                 self.back()
-                time.sleep(.25)
+                time.sleep(.5)
                 self.stop()
                 self.turn_to_deg(exit_angle)
                 if self.quick_check():
