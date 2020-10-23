@@ -283,7 +283,7 @@ class Piggy(PiggyParent):
         # stop motion before we end the method
         self.stop()
         self.turn_by_deg(-25)
-        input("Press enter to continue")
+      
         
 
     def turn_right_until_clear(self):
@@ -298,7 +298,7 @@ class Piggy(PiggyParent):
         # stop motion before we end the method
         self.stop
         self.turn_by_deg(25)
-        input("Press enter to continue")
+       
         
 
     def nav(self):
